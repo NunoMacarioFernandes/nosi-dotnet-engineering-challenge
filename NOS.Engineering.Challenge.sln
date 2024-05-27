@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOS.Engineering.Challenge.API", "NOS.Engineering.Challenge.API\NOS.Engineering.Challenge.API.csproj", "{38A141A1-B1BC-45E1-96B1-FC643E1B2137}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NOS.Engineering.Challenge.API", "NOS.Engineering.Challenge.API\NOS.Engineering.Challenge.API.csproj", "{38A141A1-B1BC-45E1-96B1-FC643E1B2137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOS.Engineering.Challenge", "NOS.Engineering.Challenge\NOS.Engineering.Challenge.csproj", "{89C198F8-74DF-431D-8A0E-0B83E5113CAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NOS.Engineering.Challenge", "NOS.Engineering.Challenge\NOS.Engineering.Challenge.csproj", "{89C198F8-74DF-431D-8A0E-0B83E5113CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOS.Engineering.Challenge.Tests", "NOS.Engineering.Challenge.Tests\NOS.Engineering.Challenge.Tests.csproj", "{05C0F7B3-4B0E-4E30-A0AB-0E0863698B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NOS.Engineering.Challenge.Tests", "NOS.Engineering.Challenge.Tests\NOS.Engineering.Challenge.Tests.csproj", "{05C0F7B3-4B0E-4E30-A0AB-0E0863698B79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOS.Engineering.Challenge.API.Tests", "NOS.Engineering.Challenge.API.Tests\NOS.Engineering.Challenge.API.Tests.csproj", "{186B4E4A-E4C6-40A1-B52D-F30DBEB069C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NOS.Engineering.Challenge.API.Tests", "NOS.Engineering.Challenge.API.Tests\NOS.Engineering.Challenge.API.Tests.csproj", "{186B4E4A-E4C6-40A1-B52D-F30DBEB069C9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9DDF4D28-E6EA-4955-800B-F45B09B11BEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +35,12 @@ Global
 		{186B4E4A-E4C6-40A1-B52D-F30DBEB069C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186B4E4A-E4C6-40A1-B52D-F30DBEB069C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186B4E4A-E4C6-40A1-B52D-F30DBEB069C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDF4D28-E6EA-4955-800B-F45B09B11BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDF4D28-E6EA-4955-800B-F45B09B11BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDF4D28-E6EA-4955-800B-F45B09B11BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDF4D28-E6EA-4955-800B-F45B09B11BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
