@@ -23,6 +23,7 @@ public class ContentController : Controller
         _logger = logger;
     }
 
+    [Obsolete("This method is obsolete. Use GetFilteredContents instead.")]
     [HttpGet]
     public async Task<IActionResult> GetManyContents()
     {
