@@ -36,4 +36,21 @@ public class ContentsManager : IContentsManager
     {
         return _database.Delete(id);
     }
+
+    public async Task<IEnumerable<Content?>> GetFiltered(string? title, string? genre)
+    {
+        var res = await _database.ReadAll().ConfigureAwait(false);
+
+        if (!string.IsNullOrWhiteSpace(title))
+        {
+            res = res.Where(c => c?.Title?.Contains(title, StringComparison.OrdinalIgnoreCase) ?? false);
+        }
+
+        if (!string.IsNullOrWhiteSpace(genre))
+        {
+            res = res.Where(c => c?.GenreList?.Any(g => string.Equals(g, genre, StringComparison.OrdinalIgnoreCase)) ?? false);
+        }
+
+        return res;
+    }
 }

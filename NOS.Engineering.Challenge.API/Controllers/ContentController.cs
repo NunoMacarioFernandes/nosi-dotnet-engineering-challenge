@@ -23,6 +23,7 @@ public class ContentController : Controller
         _logger = logger;
     }
 
+    [Obsolete("This method is obsolete. Use GetFilteredContents instead.")]
     [HttpGet]
     public async Task<IActionResult> GetManyContents()
     {
@@ -38,6 +39,34 @@ public class ContentController : Controller
 
         _logger.LogInformation("Retrieved contents");
         return Ok(contents);
+    }
+
+    [HttpGet("filtered")]
+    public async Task<IActionResult> GetFilteredContents(string? title, string? genre)
+    {
+        _logger.LogInformation($"Requesting filtered contents with genre: '{genre}' and title: '{title}'");
+
+        try
+        {
+            var contents = await _manager.GetFiltered(title, genre).ConfigureAwait(false);
+
+            if (!contents.Any())
+                return NotFound();
+            if (!contents.Any())
+            {
+                _logger.LogWarning($"Returned {contents.Count()} filtered contents.");
+                return NotFound();
+            }
+
+            return Ok(contents);
+            _logger.LogInformation($"Returned {contents.Count()} filtered contents.");
+            return Ok(contents);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred while getting filtered contents.");
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
     }
 
     [HttpGet("{id}")]
